@@ -56,9 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // 最後のステップでクリックした場合は最初に戻る
             currentStep = 0;
             updateUI();
-            
-            // 一番上までスクロール
-            window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
 

@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Hiragino Maru Gothic ProN', 'Meiryo', sans-serif; /* 子どもにも読みやすい丸ゴシック系 */
+    font-family: "Zen Maru Gothic", sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);

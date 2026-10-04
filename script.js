@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (currentStep === steps.length - 1) {
-            nextBtn.textContent = 'さいしょにもどる';
+            nextBtn.textContent = 'はじめに戻る';
         } else {
             nextBtn.textContent = 'つぎへ';
         }

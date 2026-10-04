@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // ------------------------------------------
 
+    const checkboxes = document.querySelectorAll('.parts-list input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+            const listItem = e.target.closest('li');
+            if (e.target.checked) {
+                listItem.classList.add('checked-item');
+            } else {
+                listItem.classList.remove('checked-item');
+            }
+        });
+    });
+    // ------------------------------------------
+
     // ステップ関連の要素を取得
     const steps = document.querySelectorAll('.step');
     const prevBtn = document.getElementById('prev-btn');

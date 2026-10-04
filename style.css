@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -171,6 +172,7 @@ h2 {
 
 .parts-list input[type="checkbox"] {
     transform: scale(1.5);
+    accent-color: var(--bg-color);
     margin-right: 10px;
     cursor: pointer;
 }

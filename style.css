@@ -6,6 +6,10 @@
     --text-color: #333;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Zen Maru Gothic", sans-serif;
     margin: 0;
@@ -149,6 +153,7 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1.1rem;
+    transition: all 0.3s ease; /* 色が変わる時も滑らかにするための追加(任意ですがあると綺麗です) */
 }
 
 .parts-list label {
@@ -160,6 +165,11 @@ h2 {
     transform: scale(1.5);
     margin-right: 10px;
     cursor: pointer;
+}
+
+.parts-list li.checked-item {
+    color: #999;
+    text-decoration: line-through;
 }
 
 .trouble-item {

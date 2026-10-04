@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // ---- ハンバーガーメニューの処理 ----
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // ハンバーガーボタンをクリックした時の処理
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navMenu.classList.toggle('open');
+    });
+
+    // メニュー内のリンクをクリックした時にメニューを閉じる
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            navMenu.classList.remove('open');
+        });
+    });
+    // ------------------------------------------
+
     // ステップ関連の要素を取得
     const steps = document.querySelectorAll('.step');
     const prevBtn = document.getElementById('prev-btn');

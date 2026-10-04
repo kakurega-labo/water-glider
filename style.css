@@ -20,13 +20,88 @@ header {
     color: white;
     text-align: center;
     padding: 20px 10px;
+    position: relative; /* ハンバーガーメニュー配置用 */
 }
 
 h1 { 
     margin: 0; font-size: 1.5rem;
 }
-header p { 
-    margin: 5px 0 0 0; font-size: 1rem; 
+
+/* ハンバーガーメニューのスタイル (追加) */
+.hamburger {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* ハンバーガーメニュー 開いた時の×印 (追加) */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ナビゲーションメニューのスタイル (追加) */
+.nav-menu {
+    position: absolute;
+    top: 60px; /* ヘッダーの下 */
+    right: 0;
+    width: 100%;
+    background-color: rgba(76, 124, 178, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 99;
+}
+
+.nav-menu.open {
+    max-height: 300px; /* メニューが開いたときの高さ */
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    background-color: var(--primary-hover);
 }
 
 main {
@@ -63,6 +138,48 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 8px;
+}
+
+.parts-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.parts-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.parts-list label {
+    display: block;
+    cursor: pointer;
+}
+
+.parts-list input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.trouble-item {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+.trouble-item h4 {
+    margin: 0 0 5px 0;
+    color: #856404;
+}
+
+.trouble-item p {
+    margin: 0;
 }
 
 /* プログレスバー */
@@ -161,4 +278,18 @@ button:active { transform: scale(0.95); }
 
 #next-btn:hover { 
     background-color: var(--primary-hover);
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }

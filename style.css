@@ -52,9 +52,17 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 8px; }
-.hamburger span:nth-child(3) { bottom: 0; }
+.hamburger span:nth-child(1) { 
+    top: 0; 
+}
+
+.hamburger span:nth-child(2) { 
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) { 
+    bottom: 0;
+}
 
 /* ハンバーガーメニュー 開いた時の×印 */
 .hamburger.open span:nth-child(1) {

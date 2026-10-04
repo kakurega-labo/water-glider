@@ -27,7 +27,6 @@ h1 {
     margin: 0; font-size: 1.5rem;
 }
 
-/* ハンバーガーメニューのスタイル (追加) */
 .hamburger {
     position: absolute;
     top: 50%;
@@ -53,7 +52,7 @@ h1 {
 .hamburger span:nth-child(2) { top: 8px; }
 .hamburger span:nth-child(3) { bottom: 0; }
 
-/* ハンバーガーメニュー 開いた時の×印 (追加) */
+/* ハンバーガーメニュー 開いた時の×印 */
 .hamburger.open span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -64,10 +63,8 @@ h1 {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* ナビゲーションメニューのスタイル (追加) */
 .nav-menu {
     position: absolute;
-    top: 60px; /* ヘッダーの下 */
     right: 0;
     width: 100%;
     background-color: rgba(76, 124, 178, 0.95);

@@ -12,11 +12,27 @@
 <body>
     <header>
         <h1>水中グライダー工作教室</h1>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="#video" class="nav-link">どんな風に動くの？</a></li>
+            <li><a href="#parts" class="nav-link">部品一覧</a></li>
+            <li><a href="#steps" class="nav-link">組み立て手順</a></li>
+            <li><a href="#trouble" class="nav-link">うまく泳がないときは</a></li>
+        </ul>
+    </nav>
 
     <main>
         <!-- 動作イメージ動画セクション -->
-        <section class="video-section">
+        <section id="video" class="video-section">
             <h2>どんな風に動くの？</h2>
             <p>まずは、完成した水中グライダーが水の中でどんな風にスイスイ進むのか見てみよう！</p>
             <div class="video-wrapper">
@@ -25,8 +41,20 @@
             </div>
         </section>
 
+        <!-- 部品一覧セクション -->
+        <section id="parts" class="parts-section">
+            <h2>部品一覧</h2>
+            <p>組み立てる前に、材料がすべてそろっているか確認しよう！</p>
+            <ul class="parts-list">
+                <li><label><input type="checkbox"> ボディ(本体)</label></li>
+                <li><label><input type="checkbox"> 主翼(大きな羽)</label></li>
+                <li><label><input type="checkbox"> 尾翼(小さな羽)</label></li>
+                <li><label><input type="checkbox"> おもり(クリップなど)</label></li>
+            </ul>
+        </section>
+
         <!-- 組み立て手順セクション -->
-        <section class="steps-section">
+        <section id="steps" class="steps-section">
             <h2>組み立て手順</h2>
             
             <!-- 進捗バー -->
@@ -65,7 +93,29 @@
                 <button id="next-btn">つぎへ</button>
             </div>
         </section>
+
+        <!-- うまく泳がないときはセクション  -->
+        <section id="trouble" class="trouble-section">
+            <h2>うまく泳がないときは？</h2>
+            <div class="trouble-item">
+                <h4>Q. すぐに沈んでしまう</h4>
+                <p>A. おもりが重すぎるかもしれません。おもりを少し減らしてみましょう。</p>
+            </div>
+            <div class="trouble-item">
+                <h4>Q. まっすぐ進まない</h4>
+                <p>A. 左右の羽(主翼)のバランスが崩れているかも。左右対称になるようにつけ直してみよう。</p>
+            </div>
+            <div class="trouble-item">
+                <h4>Q. 浮かんでしまう</h4>
+                <p>A. おもりが足りないサインです。少しだけおもりを足して、ゆっくり沈むように調整してね。</p>
+            </div>
+        </section>
     </main>
+
+    <!-- フッター (追加) -->
+    <footer>
+        <p>&copy;ロボットボランティア</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
